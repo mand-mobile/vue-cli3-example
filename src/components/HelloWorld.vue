@@ -2,6 +2,7 @@
   <div id="app">
     <main id="home" class="view" role="main">
       <div class="heading">
+        <md-icon name="mand-mobile-logo" color="#333"></md-icon>
         <h1><span>Mand Mobile</span></h1>
         <p>一个基于Vue的移动端UI组件库，丰富、灵活、实用，快速搭建优质的金融类产品，让复杂的金融场景变简单。</p>
       </div>
@@ -11,11 +12,13 @@
 </template>
 
 <script>
-import { Button, Toast } from 'mand-mobile'
+import { Icon, Button, Toast } from 'mand-mobile'
+import '../assets/images/mand-mobile-logo.svg'
 
 export default {
   name: 'App',
   components: {
+    [Icon.name]: Icon,
     [Button.name]: Button
   },
   methods: {
@@ -30,6 +33,10 @@ export default {
 .heading {
   text-align: center;
   margin-bottom: 48px;
+}
+.heading .md-icon {
+  width: 100px;
+  height: 80px;
 }
 .heading h1 {
   color: #333;
