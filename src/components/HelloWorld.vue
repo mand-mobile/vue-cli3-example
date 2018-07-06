@@ -30,6 +30,9 @@ export default {
 </script>
 
 <style scoped>
+.view {
+  padding: 0 20px;
+}
 .heading {
   text-align: center;
   margin-bottom: 48px;
