@@ -12,6 +12,10 @@ module.exports = {
       }
     }
   },
+  transpileDependencies: [
+    // 将代码转为es5
+    'mand-mobile',
+  ],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 
