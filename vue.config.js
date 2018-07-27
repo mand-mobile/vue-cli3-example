@@ -1,37 +1,8 @@
 const path = require('path')
-const poststylus = require('poststylus')
-const pxtorem = require('postcss-pxtorem')
 
 const resolve = file => path.resolve(__dirname, file)
 
 module.exports = {
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: {
-          'autoprefixer': {},
-          'postcss-pxtorem': {
-            'rootValue': 100,
-            'propWhiteList': []
-          }
-        }
-      },
-      stylus: {
-        use: [
-          poststylus(pxtorem({
-            rootValue: 100,
-            propWhiteList: []
-          }))
-        ],
-        import: [
-          resolve('./src/assets/theme.custom')
-        ]
-      }
-    }
-  },
-  transpileDependencies: [
-    'mand-mobile'
-  ],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 
@@ -43,5 +14,22 @@ module.exports = {
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
+    
+    config.module
+      .rule('ts')
+      .use('ts-loader')
+        .loader('ts-loader')
+          .tap(options => {
+            options.appendTsSuffixTo = [/\.vue$/]
+            options.transpileOnly = true
+            options.getCustomTransformers = () => ({
+              before: [
+                require('ts-import-plugin')({
+                  "libraryName": "mand-mobile"
+                })
+              ]
+            })
+            return options
+          })
   }
 }

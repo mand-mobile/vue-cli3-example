@@ -6,6 +6,8 @@ This is a [Mand Mobile](https://github.com/didi/mand-mobile) project example for
 
 * [Custom Theme & Custom Svg Icon](https://github.com/mand-mobile/mand-mobile-vue-cli3-example/tree/custom-theme)
 
+* [Typescript](https://github.com/mand-mobile/mand-mobile-vue-cli3-example/tree/typescript)
+
 ``` bash
 $ npm install -g @vue/cli
 $ vue create my-project

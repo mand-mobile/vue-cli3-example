@@ -9,24 +9,26 @@
   </main>
 </template>
 
-<script>
-import { Icon, Button, Toast } from 'mand-mobile'
-import '../assets/images/mand-mobile-logo.svg'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { Icon, Button, Toast } from 'mand-mobile';
 
-export default {
-  name: 'App',
+@Component({
   components: {
     [Icon.name]: Icon,
-    [Button.name]: Button
+    [Button.name]: Button,
   },
-  methods: {
-    handleClick () {
-      Toast.info('不错哟~')
-    }
+})
+// @ts-ignore
+export default class HelloWorld extends Vue {
+  private handleClick() {
+    // @ts-ignore
+    Toast.info('不错哟~');
   }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 .view
   padding 0 20px

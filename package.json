@@ -1,5 +1,5 @@
 {
-  "name": "mand-mobile-vue-cli3-example",
+  "name": "vue-cli3-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,19 +11,21 @@
     "fastclick": "^1.0.6",
     "mand-mobile": "^1.5.2",
     "normalize.css": "^8.0.0",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
+    "@types/fastclick": "^1.0.28",
     "@vue/cli-plugin-babel": "^3.0.0-rc.7",
-    "@vue/cli-plugin-eslint": "^3.0.0-rc.7",
+    "@vue/cli-plugin-typescript": "^3.0.0-rc.7",
     "@vue/cli-service": "^3.0.0-rc.7",
-    "@vue/eslint-config-standard": "^3.0.0-rc.7",
-    "babel-plugin-import": "^1.8.0",
-    "nib": "^1.1.2",
     "postcss-pxtorem": "^4.0.1",
-    "poststylus": "^1.0.0",
+    "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "svg-sprite-loader": "^3.8.0",
+    "ts-import-plugin": "^1.5.4",
+    "typescript": "^2.9.0",
     "vue-template-compiler": "^2.5.16"
   }
 }
