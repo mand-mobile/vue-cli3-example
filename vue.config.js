@@ -1,11 +1,28 @@
 const path = require('path')
+const poststylus = require('poststylus')
+const pxtorem = require('postcss-pxtorem')
 
 const resolve = file => path.resolve(__dirname, file)
 
 module.exports = {
   css: {
     loaderOptions: {
+      postcss: {
+        plugins: {
+          'autoprefixer': {},
+          'postcss-pxtorem': {
+            'rootValue': 100,
+            'propWhiteList': []
+          }
+        }
+      },
       stylus: {
+        use: [
+          poststylus(pxtorem({
+            rootValue: 100,
+            propWhiteList: []
+          }))
+        ],
         import: [
           resolve('./src/assets/theme.custom')
         ]
@@ -13,8 +30,7 @@ module.exports = {
     }
   },
   transpileDependencies: [
-    // 将代码转为es5
-    'mand-mobile',
+    'mand-mobile'
   ],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
@@ -23,9 +39,9 @@ module.exports = {
 
     svgRule
       .include
-        .add(resolve('./src/assets/images'))
-        .end()
+      .add(resolve('./src/assets/images'))
+      .end()
       .use('svg-sprite-loader')
-        .loader('svg-sprite-loader')
+      .loader('svg-sprite-loader')
   }
 }

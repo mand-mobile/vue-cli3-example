@@ -1,11 +1,9 @@
 (function (window, document) {
-
-  function resize(){
-    var ww = window.innerWidth;
+  function resize () {
+    var ww = window.innerWidth
     if (ww > window.screen.width) {
       window.requestAnimationFrame(resize)
-    }
-    else{
+    } else {
       if (ww > 720) {
         ww = 720
       }
@@ -16,11 +14,9 @@
 
   if (document.readyState !== 'loading') {
     resize()
-  }
-  else {
+  } else {
     document.addEventListener('DOMContentLoaded', resize)
   }
 
   window.addEventListener('resize', resize)
-
 })(window, document)
