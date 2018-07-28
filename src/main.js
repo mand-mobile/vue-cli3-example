@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
+import 'normalize.css'
 import App from './App.vue'
 import './assets/responsive'
 import './assets/global.css'

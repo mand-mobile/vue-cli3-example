@@ -7,15 +7,6 @@ const resolve = file => path.resolve(__dirname, file)
 module.exports = {
   css: {
     loaderOptions: {
-      postcss: {
-        plugins: {
-          'autoprefixer': {},
-          'postcss-pxtorem': {
-            'rootValue': 100,
-            'propWhiteList': []
-          }
-        }
-      },
       stylus: {
         use: [
           poststylus(pxtorem({
