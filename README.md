@@ -9,7 +9,7 @@ This is a [Mand Mobile](https://github.com/didi/mand-mobile) project example for
 * [Typescript](https://github.com/mand-mobile/mand-mobile-vue-cli3-example/tree/typescript)
 
 ``` bash
-$ https://github.com/mand-mobile/vue-cli3-example.git my-project
+$ git clone https://github.com/mand-mobile/vue-cli3-example.git my-project
 $ cd my-project
 $ npm install
 $ npm run serve
