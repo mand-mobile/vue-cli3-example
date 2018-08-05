@@ -22,7 +22,6 @@ import { Icon, Button, Toast } from 'mand-mobile';
 // @ts-ignore
 export default class HelloWorld extends Vue {
   private handleClick() {
-    // @ts-ignore
     Toast.info('不错哟~');
   }
 }

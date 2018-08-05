@@ -14,22 +14,5 @@ module.exports = {
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
-    
-    config.module
-      .rule('ts')
-      .use('ts-loader')
-        .loader('ts-loader')
-          .tap(options => {
-            options.appendTsSuffixTo = [/\.vue$/]
-            options.transpileOnly = true
-            options.getCustomTransformers = () => ({
-              before: [
-                require('ts-import-plugin')({
-                  "libraryName": "mand-mobile"
-                })
-              ]
-            })
-            return options
-          })
   }
 }
