@@ -20,11 +20,11 @@
     "@vue/cli-plugin-babel": "^3.0.0-rc.7",
     "@vue/cli-plugin-typescript": "^3.0.0-rc.7",
     "@vue/cli-service": "^3.0.0-rc.7",
+    "babel-plugin-import": "^1.8.0",
     "postcss-pxtorem": "^4.0.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "svg-sprite-loader": "^3.8.0",
-    "ts-import-plugin": "^1.5.4",
     "typescript": "^2.9.0",
     "vue-template-compiler": "^2.5.16"
   }
