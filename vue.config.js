@@ -34,5 +34,8 @@ module.exports = {
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
+    svgRule
+      .use('svgo-loader')
+      .lodaer('svgo-loader')
   }
 }
