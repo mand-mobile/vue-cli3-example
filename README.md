@@ -16,3 +16,7 @@ $ npm run serve
 ```
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
+
+## Note
+
+mand-mobile 1.x is installed by default in the project, if you need to use 2.x, please reinstall the package and follow the comments to modify [theme.custom.styl](https://github.com/mand-mobile/vue-cli3-example/blob/custom-theme/src/assets/theme.custom.styl)
