@@ -18,6 +18,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.7",
     "@vue/cli-service": "^3.0.0-rc.7",
     "@vue/eslint-config-standard": "^3.0.0-rc.7",
+    "autoprefixer": "^9.4.3",
     "babel-plugin-import": "^1.8.0",
     "nib": "^1.1.2",
     "postcss-pxtorem": "^4.0.1",

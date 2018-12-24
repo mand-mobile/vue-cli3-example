@@ -9,10 +9,13 @@ module.exports = {
     loaderOptions: {
       stylus: {
         use: [
-          poststylus(pxtorem({
-            rootValue: 100,
-            propWhiteList: []
-          }))
+          poststylus([
+            pxtorem({
+              rootValue: 100,
+              propWhiteList: []
+            }),
+            'autoprefixer'
+          ])
         ],
         import: [
           resolve('./src/assets/theme.custom')
