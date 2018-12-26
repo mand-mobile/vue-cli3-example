@@ -5,8 +5,13 @@ import App from './App.vue'
 import './assets/responsive'
 import './assets/global.styl'
 
-if ('ontouchstart' in window) {
-  FastClick.attach(document.body)
+if ('addEventListener' in document && 'ontouchstart' in window) {
+  FastClick.prototype.focus = function (targetElement) {
+    targetElement.focus()
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    FastClick.attach(document.body)
+  }, false)
 }
 
 Vue.config.productionTip = false
