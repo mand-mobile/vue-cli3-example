@@ -6,8 +6,13 @@ import './assets/responsive';
 import './assets/global.css';
 // import 'mand-mobile/lib-vw/mand-mobile.css'
 
-if ('ontouchstart' in window) {
-  FastClick.attach(document.body);
+if ('addEventListener' in document && 'ontouchstart' in window) {
+  FastClick.prototype.focus = function (targetElement: HTMLElement) {
+    targetElement.focus()
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    FastClick.attach(document.body)
+  }, false)
 }
 
 Vue.config.productionTip = false;
