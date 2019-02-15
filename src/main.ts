@@ -4,15 +4,17 @@ import FastClick from 'fastclick';
 import App from './App.vue';
 import './assets/responsive';
 import './assets/global.css';
-// import 'mand-mobile/lib-vw/mand-mobile.css'
+// import 'mand-mobile/lib/mand-mobile.css';
 
 if ('addEventListener' in document && 'ontouchstart' in window) {
-  FastClick.prototype.focus = function (targetElement: HTMLElement) {
-    targetElement.focus()
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    FastClick.attach(document.body)
-  }, false)
+  FastClick.prototype.focus = (targetElement: HTMLElement) => {
+    targetElement.focus();
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    // @ts-ignore
+    FastClick.attach(document.body);
+  }, false);
+  
 }
 
 Vue.config.productionTip = false;
